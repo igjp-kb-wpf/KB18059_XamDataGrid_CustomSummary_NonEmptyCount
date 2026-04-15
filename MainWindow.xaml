@@ -3,34 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:igWPF="http://schemas.infragistics.com/xaml/wpf"
-        xmlns:igDP="http://schemas.infragistics.com/xaml/wpf"
+        xmlns:igDP="http://infragistics.com/DataPresenter"
         xmlns:local="clr-namespace:KB18059_WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <igWPF:XamDataGrid
+        <igDP:XamDataGrid
             x:Name="xamDataGrid1"
             DataSource="{Binding}">
 
-            <igWPF:XamDataGrid.FieldLayouts>
-                <igWPF:FieldLayout IsDefault="true">
-                    <igWPF:FieldLayout.Fields>
-                        <igWPF:Field Name="ID" Width="200"/>
-                        <igWPF:Field Name="Test1" Width="200"/>
-                        <igWPF:Field Name="Test2" Width="200"/>
-                    </igWPF:FieldLayout.Fields>
+            <igDP:XamDataGrid.FieldLayouts>
+                <igDP:FieldLayout IsDefault="true">
+                    <igDP:FieldLayout.Fields>
+                        <igDP:Field Name="ID" Width="200"/>
+                        <igDP:Field Name="Test1" Width="200"/>
+                        <igDP:Field Name="Test2" Width="200"/>
+                    </igDP:FieldLayout.Fields>
 
-                    <igWPF:FieldLayout.SummaryDefinitions>
-                        <igWPF:SummaryDefinition SourceFieldName="Test1">
-                            <igWPF:SummaryDefinition.Calculator>
+                    <igDP:FieldLayout.SummaryDefinitions>
+                        <igDP:SummaryDefinition SourceFieldName="Test1">
+                            <igDP:SummaryDefinition.Calculator>
                                 <local:NonEmptyCountCalculator />
-                            </igWPF:SummaryDefinition.Calculator>
-                        </igWPF:SummaryDefinition>
-                    </igWPF:FieldLayout.SummaryDefinitions>
-                </igWPF:FieldLayout>
-            </igWPF:XamDataGrid.FieldLayouts>
+                            </igDP:SummaryDefinition.Calculator>
+                        </igDP:SummaryDefinition>
+                    </igDP:FieldLayout.SummaryDefinitions>
+                </igDP:FieldLayout>
+            </igDP:XamDataGrid.FieldLayouts>
 
-        </igWPF:XamDataGrid>
+        </igDP:XamDataGrid>
     </Grid>
 </Window>
