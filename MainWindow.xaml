@@ -7,10 +7,14 @@
         xmlns:local="clr-namespace:KB18059_WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainWindowViewModel />
+    </Window.DataContext>
+    
     <Grid>
         <igDP:XamDataGrid
             x:Name="xamDataGrid1"
-            DataSource="{Binding}">
+            DataSource="{Binding People}">
 
             <igDP:XamDataGrid.FieldLayouts>
                 <igDP:FieldLayout IsDefault="true">
